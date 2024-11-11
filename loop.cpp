@@ -20,13 +20,13 @@ int main() {
     for (int i = howmany; i > 0; i--) {
         cout << "Enter your #" << i << " pick: ";
         getline(cin, pick);
-        picks.push_back(pick);
+        picks.push_back(pick); // Pushes the user input into the vector.
     }
     cout << "\n";
     cout << "Here is your " << listname << " list ranked from lowest to highest: " << endl;
-    int currEle = howmany;
+    int currEle = howmany; // Sets the current element of the list to the lowest ranked (aka the size of the list).
     for (int i = 0; i < picks.size(); i++) {
-        cout << "#" << currEle << ": " << picks.at(i) << endl;
+        cout << "#" << currEle << ": " << picks.at(i) << endl; // Prints out the place of the respective list element followed by what the user entered. The .at() function gets the element of the vector at that index.
         currEle--;
     }
     return 0;
